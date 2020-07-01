@@ -35,7 +35,8 @@ public class MainActivity extends AppCompatActivity {
             if(resultCode == CommonStatusCodes.SUCCESS){
                 if(data != null){
                     Barcode barcodes = data.getParcelableExtra("barcode");
-                    barcodeResultTxt.setText("Barcode value: "+ barcodes.displayValue);
+                    String value = barcodes.displayValue;
+                    barcodeResultTxt.setText(value);
                 }else{
                     barcodeResultTxt.setText("No Barcode Found!");
                 }
